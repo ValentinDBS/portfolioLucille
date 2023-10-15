@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville&family=Libre+Baskerville:wght@700&display=swap');
+@import '_breakpoints.scss';
+
+*,
+::before,
+::after {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: $primary-color;
+    color: $txt-color;
+    font-family: 'Baskervville', serif;
+    font-weight: 400;
+}
+
+// General styles
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    @include xs-screen {
+        max-width: 475px;
+    }
+
+    @include sm-screen {
+        max-width: 640px;
+    }
+
+    @include md-screen {
+        max-width: 768px;
+    }
+
+    @include lg-screen {
+        max-width: 1024px;
+    }
+
+    @include xl-screen {
+        max-width: 1280px;
+    }
+
+    @include xxl-screen {
+        max-width: 1536px;
+    }
+}
+
+h1, h2, h3 {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+a {
+    color: $txt-color;
+    text-decoration: none;
+}
+
+em {
+    opacity: 0.7;
+}
+
+
+.underline {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    text-decoration: underline;
+    text-decoration-thickness: 0.1rem;
+    text-underline-position: under;
+}
+
+blockquote p::before {
+    content: '\201C';
+  }
+  
+  blockquote p::after {
+    content: '\201D';
+  }
+  
+
+// Section About
+
+div.social-medias {
+    display: none;
+    
+    @include sm-screen {
+        position: fixed;
+        bottom: 0px;
+        left: 3.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        opacity: 0.3;
+    }
+    
+
+    span.line-social {
+        border: 1px solid $border-color;
+        height: 6rem;
+        width: 0.1rem;
+    }
+}
