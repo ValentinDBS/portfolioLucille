@@ -73,6 +73,10 @@ h1 {
   font-size: 2em;
 }
 
+section > h1 {
+  color: #9F6262;
+}
+
 ul {
   list-style: none;
   margin: 0px;
@@ -105,7 +109,14 @@ blockquote p::after {
 }
 
 div.social-medias {
-  display: none;
+  position: fixed;
+  bottom: 0px;
+  left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  opacity: 0.3;
 }
 @media (min-width: 640px) {
   div.social-medias {
@@ -120,7 +131,7 @@ div.social-medias {
   }
 }
 div.social-medias span.line-social {
-  border: 1px solid #ffffff;
+  border: 1px solid #9F6262;
   height: 6rem;
   width: 0.1rem;
 }
@@ -179,18 +190,18 @@ header nav #navigation {
     width: 100%;
   }
 }
-header nav a {
+header nav ul a {
   font-size: 20px;
   display: block;
   margin: 10px 0;
   transition: 0.3s ease-in-out;
   border: 3px solid transparent;
 }
-header nav a:hover {
+header nav ul a:hover {
   border-bottom: 3px solid #9F6262;
 }
 @media (min-width: 768px) {
-  header nav a {
+  header nav ul a {
     font-size: 18px;
   }
 }
@@ -277,8 +288,8 @@ header nav a:hover {
   }
 }
 #section-1 #container-left #personal-photo-mobile {
-  height: 360px;
-  width: 360px;
+  height: 330px;
+  width: 330px;
   border-radius: 9999px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -323,11 +334,10 @@ header nav a:hover {
 #section-1 #container-right {
   flex-direction: column;
   gap: 2rem;
-  height: 420px;
   width: 320px;
+  padding: 1rem;
   color: #ffffff;
   background-color: #9F6262;
-  padding: 1rem;
   box-shadow: 19px -17px 0px 2px rgba(255, 255, 255, 0.75);
   -webkit-box-shadow: 19px -17px 0px 2px rgba(255, 255, 255, 0.75);
   -moz-box-shadow: 19px -17px 0px 2px rgba(255, 255, 255, 0.75);
@@ -341,6 +351,7 @@ header nav a:hover {
 #section-1 #container-right #quote-mobile-view {
   flex-direction: column;
   text-align: center;
+  padding: 1rem 1rem 0 1rem;
   gap: 1rem;
 }
 @media (min-width: 1024px) {
@@ -512,15 +523,14 @@ header nav a:hover {
   right: 0px;
 }
 
-footer {
+#footer {
   height: 100px;
-  background-color: #9F6262;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: end;
   padding: 1rem;
 }
-footer p {
+#footer p {
   text-align: center;
 }/*# sourceMappingURL=style.css.map */

@@ -62,23 +62,23 @@ header {
             }
         }
         
-        a {
-            font-size: 20px;
-            display: block;
-            margin: 10px 0;
-            transition: 0.3s ease-in-out;
-            border: 3px solid transparent;
-
-            &:hover {
-                border-bottom: 3px solid $bg-color;
-            }
-
-            @include md-screen {
-                font-size: 18px;
+        ul {
+            a {
+                font-size: 20px;
+                display: block;
+                margin: 10px 0;
+                transition: 0.3s ease-in-out;
+                border: 3px solid transparent;
+    
+                &:hover {
+                    border-bottom: 3px solid $bg-color;
+                }
+    
+                @include md-screen {
+                    font-size: 18px;
+                }
             }
         }
-
-        
     }
 }
 
@@ -147,7 +147,6 @@ header {
 
     #container-left {
         @extend %flexCenter;
-        // position: relative;
         flex-direction: column;
 
         @include lg-screen {
@@ -168,8 +167,8 @@ header {
         }
 
         #personal-photo-mobile {
-            height: 360px;
-            width: 360px;
+            height: 330px;
+            width: 330px;
             border-radius: 9999px;
             object-fit: cover;
             object-position: top;
@@ -216,11 +215,10 @@ header {
         @extend %flexCenter;
         flex-direction: column;
         gap: 2rem;
-        height: 420px;
         width: 320px;
+        padding: 1rem;
         color: $txt-color-secondary;
         background-color: $bg-color;
-        padding: 1rem;
         box-shadow: 19px -17px 0px 2px rgba(255,255,255,0.75);
         -webkit-box-shadow: 19px -17px 0px 2px rgba(255,255,255,0.75);
         -moz-box-shadow: 19px -17px 0px 2px rgba(255,255,255,0.75);
@@ -234,6 +232,7 @@ header {
             @extend %flexCenter;
             flex-direction: column;
             text-align: center;
+            padding: 1rem 1rem 0 1rem;
             gap: 1rem;
 
             @include lg-screen {
@@ -432,9 +431,9 @@ header {
 
 // Footer 
 
-footer {
+#footer {
     height: 100px;
-    background-color: $bg-color;
+    // color: $txt-color-secondary;
     width: 100%;
     display: flex;
     justify-content: center;
